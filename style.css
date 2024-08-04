@@ -1,0 +1,150 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: lightgray;
+    height: 100vh;
+    padding: 20px;
+}
+
+.maincontent {
+    text-align: center;
+    margin-right: 20px;
+}
+
+.login {
+    width: 100%;
+    max-width: 360px; /* Limited width for better control */
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    font-family: 'Segoe UI';
+    font-size: 30px;
+    color: rgb(3, 53, 255);
+    margin: 0;
+}
+
+h4 {
+    font-family: 'Segoe UI';
+    font-weight: 800;
+    font-size: 20px;
+    color: rgb(3, 53, 255);
+    margin: 10px 0;
+}
+
+input[type="text"], 
+input[type="password"] {
+    width: calc(100% - 20px); /* Ensures proper padding within container */
+    margin: 10px 0;
+    padding: 10px;
+    font-family: inherit;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="button"] {
+    width: calc(100% - 20px); /* Ensures proper padding within container */
+    margin: 10px 0;
+    padding: 10px;
+    font-family: inherit;
+    border: none;
+    border-radius: 5px;
+    color: whitesmoke;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="button"].login {
+    background-color: rgb(3, 53, 255);
+}
+
+input[type="button"].create-account {
+    background-color: rgb(104, 250, 36);
+}
+
+/* Paragraph Styles */
+p {
+    color: rgb(3, 53, 255);
+    font-size: 13px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Horizontal Rule Styles */
+hr {
+    margin: 30px auto;
+    width: 100%;
+    max-width: 350px;
+}
+
+/* Media Queries */
+@media (max-width: 1400px) {
+    .maincontent {
+        width: 50%;
+    }
+
+    .login {
+        width: 100%;
+    }
+    .create-account{
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .parent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .maincontent,
+    .login {
+        width: 90%;
+        margin: 0;
+    }
+
+    .login {
+        margin-top: 20px;
+    }
+    
+    .create-account{
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    input[type="text"], 
+    input[type="password"],
+    input[type="button"] {
+        width: 100%;
+    }
+
+    .login {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .create-account{
+        width: 100%;
+        margin-top: 20px;
+    }
+
+}
